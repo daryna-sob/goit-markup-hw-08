@@ -254,6 +254,11 @@ body {
   border: none;
   background-color: inherit;
 }
+.mob-menu__open:hover, .mob-menu__open:focus,
+.mob-menu__close:hover,
+.mob-menu__close:focus {
+  color: var(--tertiary-text-color);
+}
 
 .mob-menu {
   position: fixed;
@@ -318,8 +323,13 @@ body {
   align-items: center;
 }
 
+.mob-soc__item {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
 .mob-soc__item:not(:last-child) {
-  margin-right: 20px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .mob-soc__link {
