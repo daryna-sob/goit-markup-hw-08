@@ -1,0 +1,64 @@
+.team {
+  background-color: var(--section-backgrond-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+// .team__title {
+//   @include font(null, 28px, 1.18);
+//   text-align: center;
+//   color: var(--secondary-text-color);
+//   margin-bottom: 30px;
+//   @include desktop {
+//     margin-bottom: 50px;
+//     @include font(null, 36px, 1.16);
+//   }
+// }
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  // margin-left: -30px;
+  // margin-bottom: -30px;
+}
+.team__item {
+  width: 100%;
+  background-color: var(--main-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
+
+  // flex-basis: calc(100% / 4 - 30px);
+  // margin-left: 30px;
+  // margin-bottom: 30px;
+  // width: 270px;
+}
+
+.team__description {
+  padding-top: 30px;
+  padding-bottom: 24px;
+  @include desktop {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+.team__subtitle {
+  @include font(500, 16px, 1.19);
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
+}
+.team__job {
+  @include font(null, 16px, 1.19);
+  text-align: center;
+  color: var(--primary-text-color);
+  margin-bottom: 16px;
+}

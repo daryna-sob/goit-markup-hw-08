@@ -1,0 +1,17 @@
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  @include font(700, 26px, 1.19);
+}
+.logo--dark {
+  color: var(--accent-color);
+}
+.logo--light {
+  color: var(--quaternary-text-color);
+}
+.logo__word {
+  color: var(--tertiary-text-color);
+  font-family: raleway;
+  font-style: normal;
+  @include font(700, 26px, 1.19);
+}

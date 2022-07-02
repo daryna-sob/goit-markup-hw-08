@@ -1,0 +1,37 @@
+.main-footer {
+  display: flex;
+  align-items: baseline;
+}
+.address__location,
+.address__email,
+.address__tel {
+  font-family: inherit;
+  font-style: normal;
+  @include font(400, 14px, 1.71);
+  display: inline-block;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.address__location {
+  color: var(--section-backgrond-color);
+  margin-top: 20px;
+  margin-bottom: 9px;
+  &:hover,
+  &:focus {
+    color: var(--accent-button-color);
+  }
+}
+.address__email {
+  color: var(--footer-text-color);
+  margin-bottom: 9px;
+  &:hover,
+  &:focus {
+    color: var(--accent-button-color);
+  }
+}
+.address__tel {
+  color: var(--footer-text-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-button-color);
+  }
+}
