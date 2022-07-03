@@ -89,6 +89,7 @@
 .mob-menu__close {
   display: block;
   margin-left: auto;
+  z-index: 1;
   border: none;
   background-color: inherit;
   &:hover,
