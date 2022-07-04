@@ -89,17 +89,13 @@
 .mob-menu__close {
   display: block;
   margin-left: auto;
-  z-index: 1;
   border: none;
   background-color: inherit;
-  &:hover,
-  &:focus {
-    color: var(--tertiary-text-color);
-  }
 }
 
 .mob-menu {
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   background-color: #ffffff;
@@ -115,7 +111,12 @@
     overflow-y: auto;
   }
 }
-
+.mob-menu__open:hover,
+.mob-menu__open:focus,
+.mob-menu__close:hover,
+.mob-menu__close:focus {
+  fill: rgba(33, 150, 243, 1);
+}
 .mob-menu__item:not(:last-child) {
   margin-bottom: 32px;
 }

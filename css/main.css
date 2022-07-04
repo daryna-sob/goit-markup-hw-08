@@ -251,18 +251,13 @@ body {
 .mob-menu__close {
   display: block;
   margin-left: auto;
-  z-index: 1;
   border: none;
   background-color: inherit;
-}
-.mob-menu__open:hover, .mob-menu__open:focus,
-.mob-menu__close:hover,
-.mob-menu__close:focus {
-  color: var(--tertiary-text-color);
 }
 
 .mob-menu {
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   background-color: #ffffff;
@@ -277,6 +272,13 @@ body {
   justify-content: space-between;
   height: 100%;
   overflow-y: auto;
+}
+
+.mob-menu__open:hover,
+.mob-menu__open:focus,
+.mob-menu__close:hover,
+.mob-menu__close:focus {
+  fill: rgb(33, 150, 243);
 }
 
 .mob-menu__item:not(:last-child) {
@@ -682,6 +684,38 @@ body {
   padding-bottom: 60px;
 }
 
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .main-footer {
+    flex-direction: row;
+  }
+}
+
+.flex-group {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .flex-group {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .flex-group {
+    justify-content: unset;
+    align-items: baseline;
+    text-align: unset;
+  }
+}
+
 .address__location,
 .address__email,
 .address__tel {
@@ -720,6 +754,16 @@ body {
 
 .join {
   margin-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  .join {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .join {
+    margin: 0 auto;
+  }
 }
 
 .join__title,
@@ -769,6 +813,27 @@ body {
 
 .subscribe {
   margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    margin: 0;
+    align-items: baseline;
+  }
+}
+
+.subscribe__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__form {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 
 .subscribe__input {
@@ -795,6 +860,11 @@ body {
   position: relative;
   display: flex;
   margin-top: 0;
+}
+@media screen and (min-width: 1200px) {
+  .footer__button {
+    margin-left: 12px;
+  }
 }
 
 .portfolio {
@@ -905,12 +975,12 @@ body {
   background-color: rgba(49, 50, 61, 0.443);
   position: fixed;
   top: 0;
-  transition: opacity 600ms, visibility 600ms;
+  transition: opacity 600ms cubic-bezier(0.4, 0, 0.2, 1), visibility 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   border-radius: 4px;
   background-color: #ffffff;
   position: absolute;
@@ -922,6 +992,12 @@ body {
 }
 .backdrop.is-hidden .modal {
   transform: translate(0), scale(0), rotate(180deg);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal-close-button {
@@ -938,6 +1014,9 @@ body {
   padding: 6px 6px;
   display: flex;
 }
+.modal-close-button:focus, .modal-close-button:hover {
+  fill: rgb(33, 150, 243);
+}
 
 .modal-button {
   margin: 0 auto;
@@ -946,7 +1025,7 @@ body {
 }
 
 .is-hidden {
-  visibility: none;
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
@@ -990,7 +1069,11 @@ body {
 
 .checkbox-field {
   display: flex;
-  margin-left: 14px;
+}
+@media screen and (min-width: 1200px) {
+  .checkbox-field {
+    margin-left: 14px;
+  }
 }
 
 .input-wrap {
@@ -1028,6 +1111,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   border: none;
+  position: relative;
 }
 
 .modal-check:focus + .check-text::before {
@@ -1036,13 +1120,20 @@ body {
 
 .check-text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   color: #757575;
   display: flex;
   align-items: center;
-  position: relative;
+  position: absolute;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .check-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .check-text::before {
   content: "";
@@ -1055,8 +1146,8 @@ body {
 
 .modal-span {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   color: #757575;
   display: flex;
   align-items: center;
@@ -1065,4 +1156,11 @@ body {
   color: #2196f3;
   margin-left: 3px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .modal-span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }/*# sourceMappingURL=main.css.map */

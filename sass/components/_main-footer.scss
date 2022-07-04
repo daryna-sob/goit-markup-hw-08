@@ -1,7 +1,31 @@
-// .main-footer {
-//   display: flex;
-//   align-items: baseline;
-// }
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.flex-group {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-align: center;
+  @include tablet {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    // align-items: center;
+
+    @include desktop {
+      justify-content: unset;
+      align-items: baseline;
+      text-align: unset;
+    }
+  }
+}
 
 .address__location,
 .address__email,
