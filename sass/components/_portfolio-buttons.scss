@@ -1,10 +1,23 @@
 .sections-button {
+  width: 100%;
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  @include tablet {
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+  }
 }
 .sections-button__item:not(:last-child) {
+  margin-bottom: 15px;
   margin-right: 8px;
+  @include tablet {
+    margin-bottom: 0px;
+  }
 }
 .sections-button__title {
   padding-right: 22px;

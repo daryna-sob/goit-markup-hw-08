@@ -25,16 +25,16 @@
     <!--Шапка сайта-->
     <header class="header">
       <div class="container">
-        <nav class="navigation">
           <a lang="en" class="logo__header logo link logo--dark" href="./index.html">
             <span class="logo__word">Web</span>Studio
           </a>
+          <nav class="navigation">
           <ul class="navigation__list list">
             <li class="navigation__item">
-              <a href="./index.html" class="navigation__link link">Студия</a>
+              <a href="./index.html" class="navigation__link link current">Студия</a>
             </li>
             <li class="navigation__item">
-              <a href="./portfolio.html" class="navigation__link link current">Портфолио</a>
+              <a href="./portfolio.html" class="navigation__link link">Портфолио</a>
             </li>
             <li class="navigation__item">
               <a href="" class="navigation__link link">Контакты</a>
@@ -61,6 +61,87 @@
             </li>
           </ul>
         </div>
+         <button type="button" class="mob-menu__open"> <svg width="40" height="40">
+                  <use href="./images/icons.svg#icon-menu"></use></svg
+              > </button>      
+        </div>
+
+      <div class="mob-menu is-hidden">
+      <div class="container">
+        <div class="mob-menu__top">
+         <button type="button" class="mob-menu__close"> <svg width="40" height="40">
+                  <use href="./images/icons.svg#icon-close_menu-mob"></use></svg
+              > </button>
+          <ul class="mob-menu__list list">
+            <li class="mob-menu__item">
+              <a href="./index.html" class="mob-menu__link link current">Студия</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="./portfolio.html" class="mob-menu__link link">Портфолио</a>
+            </li>
+            <li class="mob-menu__item">
+              <a href="" class="mob-menu__link link">Контакты</a>
+            </li>
+          </ul>
+          </div>
+
+           <div class="mob-menu__bottom">
+          <ul class="mob-connect list">
+            <li class="mob-connect__item">
+              <a href="mailto:info@devstudio.com" class="mob-connect__tel link">
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="mob-connect__item">
+              <a href="tel:+380961111111" class="mob-connect__email link">
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+       
+<div class="mobile-social">
+        <ul class="mob-soc__list list">
+              <li class="mob-soc__item">
+                <a
+                  class="mob-soc__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram </a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a
+                  class="mob-soc__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a
+                  class="mob-soc__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a
+                  class="mob-soc__link link"
+                  href=""
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+            </div>
+    
+            </div>
+           </div>
       </div>
     </header>
     <main class="link">
@@ -95,13 +176,24 @@
               <a href="" class="work-list__link link"
                 >
                 <div class="work-list__item-wrap">
-                <img
-                  src="./images/filter1.jpg"
-                  alt="веб страница с профилями
-              людей"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                <source
+                srcset="./images/filter1.jpg 1x, ./images/filter1-2x.jpg 2x" 
+                media="(min-width:1200px)"
+                >
+                 <source
+                srcset="./images/tab-filter1-1x.jpg 1x, ./images/tab-filter1-2x.jpg 2x" 
+                media="(min-width:768px)"
+                >
+                <source
+                srcset="./images/mob-filter1-1x.jpg 1x, ./images/mob-filter1-2x.jpg 2x" 
+                media="(min-width:480px)"
+                >
+              <img 
+              src="./images/mob-filter1-1x.jpg" 
+              alt="веб страница с профилями людей" 
+              width="450" />
+              </picture>
                 <p class="work-list__overlow-text"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                </div>
                 <div class="work-list__description">
@@ -113,12 +205,24 @@
               <a href="" class="work-list__link link"
                 >
                 <div class="work-list__item-wrap">
-                <img
-                  src="./images/filter2.jpg"
-                  alt="два баскетболиста с мячом"
-                  width="370"
-                  height="294"
-                />
+                  <picture>
+                <source
+                srcset="./images/filter2.jpg 1x, ./images/filter2-2x.jpg 2x" 
+                media="(min-width:1200px)"
+                >
+                 <source
+                srcset="./images/tab-filter2-1x.jpg 1x, ./images/tab-filter2-2x.jpg 2x" 
+                media="(min-width:768px)"
+                >
+                <source
+                srcset="./images/mob-filter2-1x.jpg 1x, ./images/mob-filter2-2x.jpg 2x" 
+                media="(min-width:480px)"
+                >
+              <img 
+              src="./images/mob-filter2-1x.jpg" 
+              alt="два баскетболиста с мячом" 
+              width="450" />
+              </picture>
                  <p class="work-list__overlow-text"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                  </div>
                  <div class="work-list__description">
@@ -133,13 +237,24 @@
               <a href="" class="work-list__link link"
                 >
                 <div class="work-list__item-wrap">
-                <img
-                  src="./images/filter3.jpg"
-                  alt="логотип ресторана
-              морепродуктов"
-                  width="370"
-                  height="294"
-                />
+                   <picture>
+                <source
+                srcset="./images/filter3.jpg 1x, ./images/filter3-2x.jpg 2x" 
+                media="(min-width:1200px)"
+                >
+                 <source
+                srcset="./images/tab-filter3-1x.jpg 1x, ./images/tab-filter3-2x.jpg 2x" 
+                media="(min-width:768px)"
+                >
+                <source
+                srcset="./images/mob-filter3-1x.jpg 1x, ./images/mob-filter3-2x.jpg 2x" 
+                media="(min-width:480px)"
+                >
+              <img 
+              src="./images/mob-filter3-1x.jpg" 
+              alt="логотип ресторана морепродуктов" 
+              width="450" />
+              </picture>
                  <p class="work-list__overlow-text"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                 </div>
                  <div class="work-list__description">
@@ -152,12 +267,24 @@
               <a href="" class="work-list__link link"
                 >
                 <div class="work-list__item-wrap">
-                <img
-                  src="./images/filter4.jpg"
-                  alt="наушники"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                <source
+                srcset="./images/filter4.jpg 1x, ./images/filter4-2x.jpg 2x" 
+                media="(min-width:1200px)"
+                >
+                 <source
+                srcset="./images/tab-filter4-1x.jpg 1x, ./images/tab-filter4-2x.jpg 2x" 
+                media="(min-width:768px)"
+                >
+                <source
+                srcset="./images/mob-filter4-1x.jpg 1x, ./images/mob-filter4-2x.jpg 2x" 
+                media="(min-width:480px)"
+                >
+              <img 
+              src="./images/mob-filter4-1x.jpg" 
+              alt="наушники" 
+              width="450" />
+              </picture>
                  <p class="work-list__overlow-text"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                </div>
                  <div class="work-list__description">
@@ -170,13 +297,24 @@
               <a href="" class="work-list__link link"
                 >
                 <div class="work-list__item-wrap">
-                <img
-                  src="./images/filter5.jpg"
-                  alt="две кортонные коробки белого
-              и коричневого цвета"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                <source
+                srcset="./images/filter5.jpg 1x, ./images/filter5-2x.jpg 2x" 
+                media="(min-width:1200px)"
+                >
+                 <source
+                srcset="./images/tab-filter5-1x.jpg 1x, ./images/tab-filter5-2x.jpg 2x" 
+                media="(min-width:768px)"
+                >
+                <source
+                srcset="./images/mob-filter5-1x.jpg 1x, ./images/mob-filter5-2x.jpg 2x" 
+                media="(min-width:480px)"
+                >
+              <img 
+              src="./images/mob-filter5-1x.jpg" 
+              alt="две кортонные коробки белого и коричневого цвета" 
+              width="450" />
+              </picture>
                  <p class="work-list__overlow-text"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                 </div>
                  <div class="work-list__description">
@@ -189,13 +327,24 @@
               <a href="" class="work-list__link link"
                 >
                 <div class="work-list__item-wrap">
-                <img
-                  src="./images/filter6.jpg"
-                  alt="монитор епл с веба сайтом на
-              главной странице"
-                  width="370"
-                  height="294"
-                />
+                  <picture>
+                <source
+                srcset="./images/filter6.jpg 1x, ./images/filter6-2x.jpg 2x" 
+                media="(min-width:1200px)"
+                >
+                 <source
+                srcset="./images/tab-filter6-1x.jpg 1x, ./images/tab-filter6-2x.jpg 2x" 
+                media="(min-width:768px)"
+                >
+                <source
+                srcset="./images/mob-filter6-1x.jpg 1x, ./images/mob-filter6-2x.jpg 2x" 
+                media="(min-width:480px)"
+                >
+              <img 
+              src="./images/mob-filter6-1x.jpg" 
+              alt="монитор епл с веба сайтом на главной странице" 
+              width="450" />
+              </picture>
                  <p class="work-list__overlow-text"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                </div>
                  <div class="work-list__description">
@@ -210,13 +359,24 @@
               <a href="" class="work-list__link link"
                 >
                 <div class="work-list__item-wrap">
-                  <img
-                  src="./images/filter7.jpg"
-                  alt="издание книги с
-              лимитированной версией"
-                  width="370"
-                  height="294"
-                />
+                  <picture>
+                <source
+                srcset="./images/filter7.jpg 1x, ./images/filter7-2x.jpg 2x" 
+                media="(min-width:1200px)"
+                >
+                 <source
+                srcset="./images/tab-filter7-1x.jpg 1x, ./images/tab-filter7-2x.jpg 2x" 
+                media="(min-width:768px)"
+                >
+                <source
+                srcset="./images/mob-filter7-1x.jpg 1x, ./images/mob-filter7-2x.jpg 2x" 
+                media="(min-width:480px)"
+                >
+              <img 
+              src="./images/mob-filter7-1x.jpg" 
+              alt="издание книги с лимитированной версией" 
+              width="450" />
+              </picture>
                  <p class="work-list__overlow-text"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                </div>
                  <div class="work-list__description">
@@ -230,13 +390,25 @@
             <li class="work-list__item">
               <a href="" class="work-list__link link"
                 >
-                <div class="work-list__item-wrap">                
-                <img
-                  src="./images/filter8.jpg"
-                  alt="бейджик"
-                  width="370"
-                  height="294"
-                />
+                <div class="work-list__item-wrap">   
+                    <picture>
+                <source
+                srcset="./images/filter8.jpg 1x, ./images/filter8-2x.jpg 2x" 
+                media="(min-width:1200px)"
+                >
+                 <source
+                srcset="./images/tab-filter8-1x.jpg 1x, ./images/tab-filter8-2x.jpg 2x" 
+                media="(min-width:768px)"
+                >
+                <source
+                srcset="./images/mob-filter8-1x.jpg 1x, ./images/mob-filter8-2x.jpg 2x" 
+                media="(min-width:480px)"
+                >
+              <img 
+              src="./images/mob-filter8-1x.jpg" 
+              alt="бейджик" 
+              width="450" />
+              </picture>
                  <p class="work-list__overlow-text"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                </div>
                  <div class="work-list__description">
@@ -249,13 +421,24 @@
               <a href="" class="work-list__link link"
                 >
                 <div class="work-list__item-wrap">
-                <img
-                  src="./images/filter9.jpg"
-                  alt="мужчина работает за
-              ноутбуком"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                <source
+                srcset="./images/filter9.jpg 1x, ./images/filter9-2x.jpg 2x" 
+                media="(min-width:1200px)"
+                >
+                 <source
+                srcset="./images/tab-filter9-1x.jpg 1x, ./images/tab-filter9-2x.jpg 2x" 
+                media="(min-width:768px)"
+                >
+                <source
+                srcset="./images/mob-filter9-1x.jpg 1x, ./images/mob-filter9-2x.jpg 2x" 
+                media="(min-width:480px)"
+                >
+              <img 
+              src="./images/mob-filter9-1x.jpg" 
+              alt="мужчина работает за ноутбуком" 
+              width="450" />
+              </picture>
                  <p class="work-list__overlow-text"> Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
                </div>
                  <div class="work-list__description">
@@ -269,61 +452,65 @@
       </section>
     </main>
    <footer class="footer">
-      <div class="container main-footer">
-        <div class="contacts__footer">
-          <a lang="en" href="./index.html" class="logo__footer logo link logo--light">
-            <span class="logo__word">Web</span>Studio
-          </a>
-          <address class="address">
-            <a
-              class="address__location link"
-              href="https://www.google.com/maps/d/u/0/viewer?mid=10uSM3H-mIU3GznYo2szRIEphczw&hl=en_US&ll=50.42732700000001%2C30.538092&z=17"
-              target="_blank"
-              rel="noopener nofollow noreferrer"
-              >г. Киев, пр-т Леси Украинки, 26
+      <div class="container">
+      <div class="main-footer">
+        <div class="flex-group">
+          <div class="contacts__footer">
+            <a lang="en" href="./index.html" class="logo__footer logo link logo--light">
+              <span class="logo__word">Web</span>Studio
             </a>
-            <br />
-            <a class="address__email link" href="mailto:info@example.com">
-              info@example.com
-            </a>
-            <br />
-            <a class="address__tel link" href="tel:+380991111111"
-              >+38 099 111 11 111</a
-            >
-          </address>
+            <address class="address">
+              <a
+                class="address__location link"
+                href="https://www.google.com/maps/d/u/0/viewer?mid=10uSM3H-mIU3GznYo2szRIEphczw&hl=en_US&ll=50.42732700000001%2C30.538092&z=17"
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                >г. Киев, пр-т Леси Украинки, 26
+              </a>
+              <br />
+              <a class="address__email link" href="mailto:info@example.com">
+                info@example.com
+              </a>
+              <br />
+              <a class="address__tel link" href="tel:+380991111111"
+                >+38 099 111 11 111</a
+              >
+            </address>
+          </div>
+
+          <div class="join">
+                <h2 class="join__title">ПРИСОЕДИНЯЙТЕСЬ</h2>
+                <ul class="join-socials list">
+                  <li class="join-socials__item">
+                    <a href="" class="join-socials__link link">
+                      <svg class="join-socials__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="join-socials__item">
+                    <a href="" class="join-socials__link link">
+                      <svg class="join-socials__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-twitter"></use></svg
+                    ></a>
+                  </li>
+                  <li class="join-socials__item">
+                    <a href="" class="join-socials__link link">
+                      <svg class="join-socials__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-facebook"></use></svg
+                    ></a>
+                  </li>
+                  <li class="join-socials__item">
+                    <a href="" class="join-socials__link link">
+                      <svg class="join-socials__icon" width="20" height="20">
+                        <use href="./images/icons.svg#icon-linkedin"></use></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
         </div>
 
-        <div class="join second-footer">
-          <h2 class="join__title">ПРИСОЕДИНЯЙТЕСЬ</h2>
-          <ul class="join-socials list">
-            <li class="join-socials__item">
-              <a href="" class="join-socials__link link">
-                <svg class="join-socials__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="join-socials__item">
-              <a href="" class="join-socials__link link">
-                <svg class="join-socials__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-twitter"></use></svg
-              ></a>
-            </li>
-            <li class="join-socials__item">
-              <a href="" class="join-socials__link link">
-                <svg class="join-socials__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-facebook"></use></svg
-              ></a>
-            </li>
-            <li class="join-socials__item">
-              <a href="" class="join-socials__link link">
-                <svg class="join-socials__icon" width="20" height="20">
-                  <use href="./images/icons.svg#icon-linkedin"></use></svg
-              ></a>
-            </li>
-          </ul>
-        </div>
-        <div class="subscribe">
+    <div class="subscribe">
           <p class="subscribe__title">Подпишитесь на рассылку</p>
           <form class="subscribe__form">
             <div class="subscribe__wrap">
@@ -341,6 +528,7 @@
               > </button>   
           </form>
         </div> 
+      </div> 
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -425,5 +613,6 @@
         </div> 
       </div>
     </footer>
+     <script src="./js/menu.js"></script> 
   </body>
 </html>
