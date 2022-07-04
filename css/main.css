@@ -164,13 +164,40 @@ body {
   display: flex;
   align-items: center;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
 
-.logo__header {
-  margin-right: 93px;
+@media screen and (min-width: 768px) {
+  .logo__header {
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo__header {
+    margin-right: 93px;
+  }
 }
 
 .navigation {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+  }
+  .navigation .link.current {
+    color: var(--tertiary-text-color);
+  }
 }
 
 .navigation__list {
@@ -214,16 +241,34 @@ body {
 
 .connect {
   display: none;
-  margin-left: 305px;
+}
+@media screen and (min-width: 768px) {
+  .connect {
+    display: block;
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connect {
+    display: flex;
+    margin-left: 305px;
+  }
 }
 
 .connect__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
-.connect__item:not(:last-child) {
-  margin-right: 30px;
+.connect__item + .connect__item {
+  margin-top: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .connect__item + .connect__item {
+    margin-top: 0;
+    margin-left: 30px;
+  }
 }
 
 .connect__contact {
@@ -233,7 +278,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   display: flex;
-  align-items: center;
+  align-items: baseline;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .connect__contact:hover, .connect__contact:focus {
@@ -255,6 +300,12 @@ body {
   background-color: inherit;
 }
 
+@media screen and (min-width: 768px) {
+  .mob-menu__open {
+    display: none;
+  }
+}
+
 .mob-menu {
   position: fixed;
   z-index: 2;
@@ -265,6 +316,11 @@ body {
   height: 100%;
   padding-top: 10px;
   padding-bottom: 48px;
+}
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
 }
 .mob-menu .container {
   display: flex;
@@ -486,12 +542,18 @@ body {
 }
 
 .about {
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
-  padding-bottom: 94px;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .about {
+    display: flex;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+    padding-bottom: 94px;
+  }
 }
 
 .about__list {

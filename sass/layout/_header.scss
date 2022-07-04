@@ -2,25 +2,38 @@
   background-color: var(--main-background-color);
   padding-top: 16px;
   padding-bottom: 16px;
-  // padding-top: 24px;
-  // padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
   > .container {
     display: flex;
     align-items: center;
   }
+  @include tablet {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @include desktop {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 .logo__header {
-  margin-right: 93px;
+  @include tablet {
+    margin-right: 88px;
+  }
+  @include desktop {
+    margin-right: 93px;
+  }
 }
 
 .navigation {
   display: none;
-  // display: flex;
-  // & .link.current {
-  //   color: var(--tertiary-text-color);
-  // }
+  @include tablet {
+    display: flex;
+    & .link.current {
+      color: var(--tertiary-text-color);
+    }
+  }
 }
 .navigation__list {
   @include font(500, 14px, 1.14);
@@ -58,21 +71,35 @@
 }
 .connect {
   display: none;
-  margin-left: 305px;
+  @include tablet {
+    display: block;
+    margin-left: 50px;
+  }
+  @include desktop {
+    display: flex;
+    margin-left: 305px;
+  }
 }
 .connect__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
-.connect__item:not(:last-child) {
-  margin-right: 30px;
+
+.connect__item + .connect__item {
+  margin-top: 10px;
+  @include desktop {
+    margin-top: 0;
+    margin-left: 30px;
+  }
 }
 .connect__contact {
   @include font(500, 14px, 1.14);
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   display: flex;
-  align-items: center;
+  align-items: baseline;
+
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
@@ -92,7 +119,11 @@
   border: none;
   background-color: inherit;
 }
-
+.mob-menu__open {
+  @include tablet {
+    display: none;
+  }
+}
 .mob-menu {
   position: fixed;
   z-index: 2;
@@ -103,6 +134,10 @@
   height: 100%;
   padding-top: 10px;
   padding-bottom: 48px;
+  @include tablet {
+    display: none;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
