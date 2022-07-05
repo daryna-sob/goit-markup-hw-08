@@ -10,35 +10,25 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  width: 100%;
 }
 .feature__item {
-  width: 100%;
-  max-width: 450px;
   @include tablet {
-    max-width: 354px;
-    width: calc((100% - 30px) / 2);
+    width: 354px;
   }
   @include desktop {
-    max-width: 270px;
-    width: calc((100% - 90px) / 4);
+    width: 270px;
   }
 }
 
 .thumb {
-  justify-content: center;
-  background-color: #f5f4fa;
-  width: 450px;
-  height: 120px;
-  padding: 25px 191px;
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
-  @include tablet {
-    width: 354px;
-    padding: 25px 144px;
-  }
-  @include desktop {
-    width: 270px;
-    padding: 25px 100px;
-  }
+  border-radius: 4px;
+  height: 120px;
+  background-color: #f5f4fa;
+  justify-content: center;
 }
 
 .feature__subtitle {
